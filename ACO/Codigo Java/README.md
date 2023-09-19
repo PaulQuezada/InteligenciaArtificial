@@ -3,7 +3,7 @@
 Tendremos que ir a la ubicacion del archivo. Para ejecutarlo hay que escribir una serie de comandos:
 - javac principal.java
 - java principal
-Observacion
+## Observacion
 El programa pedira la cantidad de iteraciones, hormigas y evaporacion. Para la evaporacion tendremos que ingresar un valor entre el 1 y el 0.
 
 # Como funciona
