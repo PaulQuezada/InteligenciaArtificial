@@ -23,7 +23,6 @@ public class hormiga {
                 i++;
             }
         }
-        System.out.println("Hormiga " + id + " de la iteracion " + iteracion+" ha recorrido: "+recorrido);
         depositarFeromonas();
     }
 
@@ -105,5 +104,9 @@ public class hormiga {
                 break;
             }
         }
+    }
+
+    public int getRecorrido(){
+        return recorrido;
     }
 }

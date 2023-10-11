@@ -1,12 +1,14 @@
 import java.util.List;
 
 public class aco {
+    int mejor_recorrido;
     int iteraciones,hormigas;
     double evaporacion;
     List<ciudad> ciudades;
     static double feromonas[][];
 
     public void run(){
+        mejor_recorrido = 0;
         ciudad ciudad_random = ciudad_random(); // Escogemos una ciudad al azar
         System.out.println("Ciudad random: " + ciudad_random.getId());
         for (int i = 0; i < iteraciones; i++) {
@@ -14,9 +16,17 @@ public class aco {
                 hormiga ant = new hormiga();
                 ant.setData(j,i, this.ciudades, ciudad_random);
                 ant.run();
+                if(i==0 && j==0){
+                    mejor_recorrido = ant.getRecorrido();
+                }
+                if(mejor_recorrido>ant.getRecorrido()){
+                    mejor_recorrido = ant.getRecorrido();
+                }
             }
             evaporar();
         }
+
+        System.out.println("Mejor recorrido: " + mejor_recorrido);
     }
 
     public void imprimirFeromonas(){
