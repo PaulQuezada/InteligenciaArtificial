@@ -48,5 +48,15 @@ perceptron = Perceptron(no_of_inputs=2)
 # Entrenamos el perceptron 
 perceptron.train(X, y)
 
-# Pesos aprendidos despues del entrenamiento con los datos ficticios
-print(perceptron.weights)
+# Imprimimos los pesos del perceptron
+bias_weight = perceptron.weights[0]
+input1_weight = perceptron.weights[1]
+input2_weight = perceptron.weights[2]
+
+weights_dict = {
+    "Bias - Weight": bias_weight,
+    "Weight para la entrada 1": input1_weight,
+    "Weight para la entradat 2": input2_weight
+}
+
+weights_dict
